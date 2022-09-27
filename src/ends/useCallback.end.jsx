@@ -1,72 +1,72 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from "react";
 
 const UseStateComp = () => {
-	const [click, setClick] = useState(0);
-	const [theme, setTheme] = useState('theme1');
+  const [click, setClick] = useState(0);
+  const [theme, setTheme] = useState("theme1");
 
-	const getNumbers = useCallback(
-		(incrementor) => {
-			return [
-				click + 1 + incrementor,
-				click + 2 + incrementor,
-				click + 3 + incrementor,
-			];
-		},
-		[click]
-	);
+  const getNumbers = useCallback(
+    (incrementor) => {
+      return [
+        click + 1 + incrementor,
+        click + 2 + incrementor,
+        click + 3 + incrementor,
+      ];
+    },
+    [click]
+  );
 
-	const changeTheme = () => {
-		if (theme === 'theme1') setTheme('theme2');
-		else setTheme('theme1');
-	};
+  const changeTheme = () => {
+    if (theme === "theme1") setTheme("theme2");
+    else setTheme("theme1");
+  };
 
-	useEffect(() => {
-		alert(`Welcome`);
-	}, []);
+  useEffect(() => {
+    alert(`Welcome`);
+  }, []);
 
-	return (
-		<div>
-			<button className="click-me" onClick={() => setClick(click + 1)}>
-				Click me
-			</button>
-			<button className="change-theme" onClick={changeTheme}>
-				Change theme
-			</button>
-			<span className={theme + ' display-text'}>
-				You've clicked {click} times. <br />
-				The next 3 numbers are:
-			</span>
+  return (
+    <div>
+      <button className="click-me" onClick={() => setClick(click + 1)}>
+        Click me
+      </button>
+      <button className="change-theme" onClick={changeTheme}>
+        Change theme
+      </button>
+      <span className={theme + " display-text"}>
+        You've clicked {click} times. <br />
+        The next 3 numbers are:
+      </span>
 
-			<List getNumbers={getNumbers} theme={theme} />
-		</div>
-	);
+      <List getNumbers={getNumbers} theme={theme} />
+    </div>
+  );
 };
 
 const List = ({ getNumbers, theme }) => {
-	const [numbers, setNumbers] = useState([]);
-	const [incrementor, setIncrementor] = useState(0);
+  const [numbers, setNumbers] = useState([]);
+  const [incrementor, setIncrementor] = useState(0);
 
-	useEffect(() => {
-		setNumbers(getNumbers(incrementor));
-		console.log('Updating numbers...');
-	}, [getNumbers, incrementor]);
+  useEffect(() => {
+    setNumbers(getNumbers(incrementor));
+    console.log("Updating numbers...");
+  }, [getNumbers, incrementor]);
 
-	return (
-		<>
-			<input
-				type={'number'}
-				value={incrementor}
-				onChange={(e) => setIncrementor(parseInt(e.target.value))}
-			/>
-			<ul className="number-list">
-				{numbers.map((num, index) => (
-					<li className={theme} key={index}>
-						{num}
-					</li>
-				))}
-			</ul>
-		</>
-	);
+  return (
+    <>
+      <input
+        type={"number"}
+        value={incrementor}
+        onChange={(e) => setIncrementor(parseInt(e.target.value))}
+      />
+      <ul className="number-list">
+        {numbers.map((num, index) => (
+          <li className={theme} key={index}>
+            {num}
+          </li>
+        ))}
+      </ul>
+    </>
+  );
 };
 
 export default UseStateComp;
