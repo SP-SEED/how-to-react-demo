@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo } from 'react';
 
 const UseStateComp = () => {
   const [click, setClick] = useState(0);
-  const [theme, setTheme] = useState("theme1");
+  const [theme, setTheme] = useState('theme1');
 
   const getNumbers = useMemo(
     (incrementor) => {
@@ -16,8 +16,8 @@ const UseStateComp = () => {
   );
 
   const changeTheme = () => {
-    if (theme === "theme1") setTheme("theme2");
-    else setTheme("theme1");
+    if (theme === 'theme1') setTheme('theme2');
+    else setTheme('theme1');
   };
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const UseStateComp = () => {
       <button className="change-theme" onClick={changeTheme}>
         Change theme
       </button>
-      <span className={theme}>
+      <span className={theme + ' display-text'}>
         You've clicked {click} times. <br />
         The next 3 numbers are:
       </span>
@@ -47,14 +47,14 @@ const List = ({ getNumbers, theme }) => {
   const [incrementor, setIncrementor] = useState(0);
 
   useEffect(() => {
-    setNumbers(getNumbers(incrementor));
-    console.log("Updating numbers...");
+    setNumbers(getNumbers);
+    console.log('Updating numbers...');
   }, [getNumbers, incrementor]);
 
   return (
     <>
       <input
-        type={"number"}
+        type={'number'}
         value={incrementor}
         onChange={(e) => setIncrementor(parseInt(e.target.value))}
       />
