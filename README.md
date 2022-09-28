@@ -19,7 +19,7 @@ To get started with the project prior to the start of the How to React session, 
 
 ### Cloning the Project
 
-In your terminal, type `git clone git clone https://github.com/SP-SEED/how-to-react-demo.git` to clone the project.
+In your terminal, type `git clone https://github.com/SP-SEED/how-to-react-demo.git` to clone the project.
 
 ### Installing Dependencies
 
