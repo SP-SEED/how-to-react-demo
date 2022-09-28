@@ -14,6 +14,10 @@ import UseCallbackTestMemoComp from "./useCallbackVsUseMemo/useCallbackTestMemo"
 import App from "./App";
 import Comp from "./starts/Component.start";
 import CompEnd from "./ends/Component.end";
+import UseContextStart from "./starts/useContext/useContextStart.start";
+import UseContextDest from "./starts/useContext/useContextDest.start";
+import UseContextStartEnd from "./ends/useContext/useContextStart.end";
+import UseContextDestEnd from "./ends/useContext/useContextDest.end";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -31,6 +35,10 @@ root.render(
       <Route path="end/useMemo" element={<UseMemoCompEnd />} />
       <Route path="end/useCallback" element={<UseCallbackCompEnd />} />
       <Route path="compare/useCallbackTestMemo" element={<UseCallbackTestMemoComp />} />
+      <Route path="start/useContext" element={<UseContextStart />} />
+      <Route path="start/useContextDest" element={<UseContextDest />} />
+      <Route path="end/useContext" element={<UseContextStartEnd />} />
+      <Route path="end/useContextDest" element={<UseContextDestEnd />} />
     </Routes>
   </BrowserRouter>
 );

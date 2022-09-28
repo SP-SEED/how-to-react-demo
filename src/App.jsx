@@ -7,6 +7,8 @@ const startRoutes = [
   { path: "start/useEffect", name: "useEffect()" },
   { path: "start/useMemo", name: "useMemo()" },
   { path: "start/useCallback", name: "useCallback()" },
+  { path: "start/useContext", name: "useContext()" },
+  { path: "start/useContextDest", name: "useContextDest()" },
 ];
 
 const endRoutes = [
@@ -15,6 +17,8 @@ const endRoutes = [
   { path: "end/useEffect", name: "useEffect()" },
   { path: "end/useMemo", name: "useMemo()" },
   { path: "end/useCallback", name: "useCallback()" },
+  { path: "end/UseContext", name: "useContext()" },
+  { path: "end/UseContextDest", name: "useContextDest()" },
 ];
 
 export const App = () => {
