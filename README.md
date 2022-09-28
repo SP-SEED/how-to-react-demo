@@ -25,7 +25,7 @@ In your terminal, type `git clone https://github.com/SP-SEED/how-to-react-demo.g
 
 After cloning the project, install dependencies via `npm install`.
 
-## Running Project: `npm start`
+### Running Project: `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
