@@ -1,12 +1,9 @@
 import React from "react";
 import styles from "./Component.module.css";
-
-// function Center({ text, className }) {
-//   return <div className={`${styles.center} ${className}`}>{text}</div>;
-// }
+import cx from "classnames";
 
 function Center({ children, className }) {
-  return <div className={`${styles.center} ${className}`}>{children}</div>;
+  return <div className={cx(styles.center, className)}>{children}</div>;
 }
 
 function Comp() {
