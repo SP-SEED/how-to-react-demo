@@ -6,9 +6,10 @@
  * 4. Rendering Iterated Components
  */
 import React from "react";
+import styles from "./Component.module.css";
+import cx from "classnames";
 
-// function Center() {
-// }
+function Center() {}
 
 function Comp() {}
 
