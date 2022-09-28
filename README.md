@@ -13,9 +13,17 @@ This demo will be used with How to React on `28 Septemeber 2022`, presented by [
 - `useMemo()` 
 - `useCallback`
 
-## Installing Dependencies
+## Installation
 
-Install dependencies via `npm install`.
+To get started with the project prior to the start of the How to React session, you can follow the instructions below to clone the repo into your local machine.
+
+### Cloning the Project
+
+In your terminal, type `git clone git clone https://github.com/SP-SEED/how-to-react-demo.git` to clone the project.
+
+### Installing Dependencies
+
+After cloning the project, install dependencies via `npm install`.
 
 ## Running Project: `npm start`
 
