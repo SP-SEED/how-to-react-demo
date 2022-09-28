@@ -2,6 +2,7 @@ import React, { useCallback } from "react";
 import { Link } from "react-router-dom";
 
 const startRoutes = [
+  { path: "start/component", name: "Component" },
   { path: "start/useState", name: "useState()" },
   { path: "start/useEffect", name: "useEffect()" },
   { path: "start/useMemo", name: "useMemo()" },
@@ -9,6 +10,7 @@ const startRoutes = [
 ];
 
 const endRoutes = [
+  { path: "end/component", name: "Component" },
   { path: "end/useState", name: "useState()" },
   { path: "end/useEffect", name: "useEffect()" },
   { path: "end/useMemo", name: "useMemo()" },
