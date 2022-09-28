@@ -12,24 +12,25 @@ import UseMemoCompEnd from "./ends/useMemo.end";
 import UseCallbackCompEnd from "./ends/useCallback.end";
 import UseCallbackTestMemoComp from "./useCallbackVsUseMemo/useCallbackTestMemo";
 import App from "./App";
+import Comp from "./starts/Component.start";
+import CompEnd from "./ends/Component.end";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
+      <Route path="start/Component" element={<Comp />} />
       <Route path="start/useState" element={<UseStateComp />} />
       <Route path="start/useEffect" element={<UseEffectComp />} />
       <Route path="start/useMemo" element={<UseMemoComp />} />
       <Route path="start/useCallback" element={<UseCallbackComp />} />
+      <Route path="end/Component" element={<CompEnd />} />
       <Route path="end/useState" element={<UseStateCompEnd />} />
       <Route path="end/useEffect" element={<UseEffectCompEnd />} />
       <Route path="end/useMemo" element={<UseMemoCompEnd />} />
       <Route path="end/useCallback" element={<UseCallbackCompEnd />} />
-      <Route
-        path="compare/useCallbackTestMemo"
-        element={<UseCallbackTestMemoComp />}
-      />
+      <Route path="compare/useCallbackTestMemo" element={<UseCallbackTestMemoComp />} />
     </Routes>
   </BrowserRouter>
 );

@@ -1,0 +1,19 @@
+/**
+ * #1a1a1f1 background color
+ * 1em padding
+ * #ffffff text color
+ */
+.container {
+  background-color: #1a1a1f;
+  padding: 1em;
+  color: #fff;
+}
+
+/** 
+ * Center using flex 
+ */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
